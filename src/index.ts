@@ -1,3 +1,3 @@
-import { renderFrontend } from "./frontend";
+import { renderFrontend } from "./frontend/render-frontend";
 
 renderFrontend();

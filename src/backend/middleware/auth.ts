@@ -7,6 +7,10 @@ export const authorise = (
   response: Response,
   next: NextFunction
 ) => {
+  if (request.method === "OPTIONS") {
+    next();
+    return;
+  }
   const token = request.get(HTTP_HEADERS.authorization);
   if (token !== API_KEY) {
     console.log(`Requested route without token. Permission denied`);

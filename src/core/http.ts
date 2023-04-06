@@ -5,4 +5,7 @@ export const HTTP_STATUS_CODES = {
 
 export const HTTP_HEADERS = {
   authorization: "authorization",
+  accessControlAllowOrigin: "access-control-allow-origin",
+  accessControlAllowCredentials: "access-control-allow-credentials",
+  accessControlAllowHeaders: "access-control-allow-headers",
 };
