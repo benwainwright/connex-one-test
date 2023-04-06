@@ -16,10 +16,9 @@ afterEach(() => {
 const SIXTH_APRIL_EPOCH_SECONDS = 1680735600;
 
 test("When the test route is called it returns the correct time in seconds", () => {
-  const request = mock<Request>();
   const response = mock<Response<TimeResponse>>();
 
-  timeHandler(request, response);
+  timeHandler(mock(), response);
   expect(response.json).toBeCalledWith({
     epoch: SIXTH_APRIL_EPOCH_SECONDS,
   });
